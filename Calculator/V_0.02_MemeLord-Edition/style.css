@@ -1,0 +1,60 @@
+body
+{
+    background-color: black;
+    color: white;
+    font-family: "Pixelify Sans";
+    margin: 0;
+}
+
+table 
+{
+    width: 100%;
+    height: 70vh;
+    background-color: rgb(6, 14, 26);
+    color: rgb(255, 255, 255);
+    font-family: "Pixelify Sans";
+}
+
+td
+{
+    width: 20%;
+    text-align: center;
+    font-size: 30px;
+}
+
+td:hover
+{
+    cursor: pointer;
+    background-color: rgb(50, 75, 100);
+}
+
+#resultArea
+{
+    text-align: right;
+    font-size: 48px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 30vh;
+    background-color: rgb(6, 14, 26);
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+#calc-history-box 
+{
+    width: 180px !important;
+    height: 220px !important;
+    resize: none;
+    overflow: hidden;
+}
+
+#operator
+{
+    background-color: rgb(1, 3, 7);
+}
+
+#operator:hover
+{
+    background-color: rgb(50, 75, 100);
+}

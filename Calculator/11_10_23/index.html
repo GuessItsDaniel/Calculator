@@ -1,0 +1,182 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Zhe German Taschenrechner</title>
+</head>
+
+
+
+<body>
+    <h1> Zhe German Taschenrechner Project by yours truly</h1>
+
+    <div id="resultArea"></div>
+    
+
+<table>
+    
+    <tr>
+        <td onclick="clearDisplay()" id="operator">Delete your Browser history</td>
+        <td onclick="appendOperation('(')" id="operator">(</td>
+        <td onclick="appendOperation(')')" id="operator">)</td>
+        <td onclick="calculatePercentage('%')" id="operator">%</td>
+        <td onclick="appendOperation('/')" id="operator">/</td>
+    </tr>
+
+    <tr>
+        <td onclick="appendOperation(7)">7</td>
+        <td onclick="appendOperation(8)">8</td>
+        <td onclick="appendOperation(9)">9</td>
+        <td onclick="appendOperation('*')" id="operator">x</td>
+        <td onclick="updateAlert('')" id="operator">Adv. Functions</td>
+    </tr>
+
+
+    <tr>
+        <td onclick="appendOperation(4)">4</td>
+        <td onclick="appendOperation(5)">5</td>
+        <td onclick="appendOperation(6)">6</td>
+        <td onclick="appendOperation('-')" id="operator">-</td>
+        <td onclick="theNonFunctionalButton()" id="operator"></td>
+    </tr>
+
+        
+    <tr>
+        <td onclick="appendOperation(1)">1</td>
+        <td onclick="appendOperation(2)">2</td>
+        <td onclick="appendOperation(3)">3</td>
+        <td onclick="appendOperation('+')" id="operator">+</td>
+        <td onclick="appendOperation('^')" id="operator">^</td>
+
+        
+    </tr>
+
+    <tr>
+        <td onclick="appendOperation(0)">0</td>
+        <td onclick="appendOperation('.')">,</td>
+        <td onclick="deletelast()">Run it back</td>
+        <td onclick="calculateResult()" id="operator">=</td>
+        <td onclick="calculatePower()" id="operator">x^ⁿ=</td>
+    </tr>
+
+</table>
+
+<script>
+
+    function updateAlert()
+    {
+        alert("Wait for the alpha release V 0.02")
+    }
+
+    function appendOperation(operation) 
+        {
+            const container = document.getElementById("resultArea");
+            container.innerHTML += operation;
+
+        }
+
+        function calculateResult() {
+    const container = document.getElementById("resultArea");
+    try {
+        let calculation = container.innerHTML;
+
+        // Replace instances like 2(2*2) with 2*(2*2)
+        calculation = calculation.replace(/(\d+)\(([^)]+)\)/g, "$1*($2)");
+
+        const result = eval(calculation);
+        container.innerHTML = result;
+    } catch (error) {
+        container.innerHTML = 'Error';
+    }
+}
+
+
+        function calculatePower() {
+    const container = document.getElementById("resultArea");
+    try {
+        const calculation = container.innerHTML;
+        const parts = calculation.split('^');
+        if (parts.length === 2) {
+            const base = parseFloat(parts[0]);
+            const exponent = parseFloat(parts[1]);
+            if (!isNaN(base) && !isNaN(exponent)) {
+                const result = Math.pow(base, exponent);
+                container.innerHTML = result;
+            } else {
+                container.innerHTML = 'Invalid input';
+            }
+        } else {
+            container.innerHTML = 'Invalid input';
+        }
+    } catch (error) {
+        container.innerHTML = 'Error';
+    }
+}
+
+
+        function theNonFunctionalButton()
+        {
+        // Display a message
+        let messageArea = document.getElementById("resultArea");
+        messageArea.innerHTML = "Comes with the v0.05 Update";
+        
+        // Clear the message after a few seconds (optional)
+        setTimeout(function () 
+        {
+        messageArea.innerHTML = '';
+        }, 3000); // Display message for 3 seconds (adjust as needed)
+        }
+
+    function deletelast() 
+    {
+        const container = document.getElementById("resultArea");
+        const currentDisplay = container.innerHTML;
+        container.innerHTML = currentDisplay.slice(0, -1);
+        calculation = calculation.slice(0, -1);
+    
+    
+    }
+
+    function clearDisplay() 
+    {
+        let container = document.getElementById("resultArea");
+        container.innerHTML = ''; // Clear the display
+       
+        // Display a message
+        let messageArea = document.getElementById("resultArea");
+        messageArea.innerHTML = "Your Browser history was deleted successfully!";
+
+        // Clear the message after a few seconds (optional)
+        setTimeout(function () {
+        messageArea.innerHTML = '';
+        }, 3000); // Display message for 3 seconds (adjust as needed)
+
+    }
+
+
+    function calculatePercentage() 
+    {
+        let container = document.getElementById("resultArea");
+        try 
+        {
+        const expression = container.innerHTML;
+        const result = eval(expression);
+        const percentageResult = (result / 100).toString();
+        container.innerHTML = percentageResult;
+        } 
+        catch (error) 
+        {
+        // Handle invalid expressions or errors
+        container.innerHTML = 'Error';
+        }
+    }
+
+</script>
+
+</body>
+
+</html>

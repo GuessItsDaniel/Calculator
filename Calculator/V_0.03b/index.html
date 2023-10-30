@@ -1,0 +1,72 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Taschenrechner V_0.03b </title>
+</head>
+
+<body>
+
+    <h1>Taschenrechner V-0.03b</h1>
+
+    <script src="app.js"></script>
+
+    <div id="resultArea"></div>
+
+<table>
+    
+    <tr>
+        <td rowspan="4"><div id="historyArea">Vergangene Rechnungen:</div></td>
+        <td onclick="clearDisplay()" id="operator">AC</td>
+        <td onclick="appendOperation('(')" id="operator">(</td>
+        <td onclick="appendOperation(')')" id="operator">)</td>
+        <td onclick="calculatePercentage('%')" id="operator">%</td>
+        <td onclick="appendOperation('/')" id="operator">/</td>
+    </tr>
+
+    <tr>
+        <td onclick="appendOperation(7)">7</td>
+        <td onclick="appendOperation(8)">8</td>
+        <td onclick="appendOperation(9)">9</td>
+        <td onclick="appendOperation('*')" id="operator">x</td>
+        <td onclick="appendOperation('^')" id="operator">^</td>
+    </tr>
+
+
+    <tr>
+        <td onclick="appendOperation(4)">4</td>
+        <td onclick="appendOperation(5)">5</td>
+        <td onclick="appendOperation(6)">6</td>
+        <td onclick="appendOperation('-')" id="operator">-</td>
+        <td class="tdPlaceholder"></td>
+    </tr>
+
+        
+    <tr>
+        <td onclick="appendOperation(1)">1</td>
+        <td onclick="appendOperation(2)">2</td>
+        <td onclick="appendOperation(3)">3</td>
+        <td onclick="appendOperation('+')" id="operator">+</td>
+        <td class="tdPlaceholder"></td>
+
+        
+    </tr>
+
+    <tr>
+        <td onclick="ClearHistory('')" id="historyClearer">Vergangene Rechnungen löschen</td>
+        <td onclick="appendOperation(0)">0</td>
+        <td onclick="appendOperation('.')">,</td>
+        <td onclick="deletelast()">Löschen</td>
+        <td colspan="2"><div onclick="calculate()" id="operator"></div>=</td>
+    </tr>
+
+
+</table>
+
+</body>
+
+</html>
