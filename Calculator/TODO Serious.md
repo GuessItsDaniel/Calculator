@@ -1,4 +1,4 @@
-#### Really important!
+# Really important!
 - [x] Make the Run back button great again! V0.02
 - [x] Calculate something like 2(2*2) V0.02
 - [x] Potencies V0.02
@@ -7,7 +7,7 @@
 - [x] Buttons if possible at same dimensions V0.03b
 - [x] Documentation
 
-### Important!
+## Important!
 - [x] No more than 1 Operand e.g ++ or -- V0.03
 - [x] Display History of Calculations V0.03
 - [ ] Type in with your Keyboard
@@ -15,7 +15,7 @@
 - [ ] root calculation
 - [ ] Rework the Design
 
-## Nice to have?
+#### Nice to have?
 - [ ] Clock-function
 
 ## The Part where you do the learning
@@ -23,7 +23,7 @@
         -espiacially the javascript functions?
 - [ ] Learn the shortcuts
 
-# What did you learn today?
+What did you learn today?
 - October - 10 - 23
 -----------------------------------------------------------------
 - Making Backups when creating new Versions of your Code
