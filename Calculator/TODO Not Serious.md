@@ -1,3 +1,5 @@
+This is just for fun don't take this seriously
+
 # Life or Death important
 - [ ] Gacha Mechanics like Genshin Impact
 - [ ] CSGO Cases but with mathematics
@@ -14,4 +16,4 @@
 - [ ] Subscription model
 
 ### Important but not urgent
-- [ ]Release on Google Play
+- [ ] Release on Google Play
