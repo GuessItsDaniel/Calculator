@@ -15,15 +15,15 @@
 - [ ] root calculation
 - [ ] Rework the Design
 
-#### Nice to have?
+# Nice to have?
 - [ ] Clock-function
 
-## The Part where you do the learning
+#### The Part where you do the learning
 - [ ] Can you explain the Code written?
         -espiacially the javascript functions?
 - [ ] Learn the shortcuts
 
-What did you learn today?
+## What did you learn today?
 - October - 10 - 23
 -----------------------------------------------------------------
 - Making Backups when creating new Versions of your Code
